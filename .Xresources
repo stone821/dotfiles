@@ -1,0 +1,37 @@
+!{{{ xft settings
+Xcursor.theme: Vanilla-DMZ-AA
+!}}}
+!{{{ rxvt-unicode general
+#include "/home/lei/.Xcolors.d/solarized"
+URxvt.font: -misc-tamzenforpowerline-medium-r-normal--15-108-100-100-c-80-iso10646-1, xft:WenQuanYi Bitmap Song:pixelsize=14, xft:DejaVu Sans Mono for Powerline:pixelsize=14
+URxvt.blodFont: -misc-tamzenforpowerline-bold-r-normal--15-108-100-100-c-80-iso10646-1, xft:WenQuanYi Bitmap Song:pixelsize=14,xft:DejaVu Sans Mono for Powerline:pixelsize=14
+URxvt.scrollBar: plain
+URxvt.saveLines:	5000
+!fix the solarized theme
+!from https://bbs.archlinux.org/viewtopic.php?id=164108
+URxvt.intensityStyles:	false
+!}}}
+
+!{{{ perl extensions
+URxvt.perl-ext-common:	default,clipboard,matcher,keyboard-select,url-select
+URxvt.url-launcher: 	/usr/bin/chromium
+URxvt.matcher.button: 	1
+URxvt.underlineURLs: 	true
+URxvt.keysym.M-Escape:	perl:keyboard-select:activate
+URxvt.keysym.M-c:	perl:clipboard:copy
+URxvt.keysym.M-v:	perl:clipboard:paste
+URxvt.keysym.M-C-v:	perl:clipboard:paste_escaped
+URxvt.keysym.M-u:	perl:url-select:select_next
+URxvt.url-select.launcher:	/usr/bin/chromium
+!}}}
+
+!{{{ Scrollback Position
+! do not scroll with output
+URxvt.scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt.scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt.scrollTtyKeypress: true
+!}}}
+
+
